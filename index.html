@@ -1,17 +1,83 @@
 <!DOCTYPE html>
+<html lang="en">
 <html>
 <head>
-
+	<meta charset="UTF-8">
+	<meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>Pyramid-slide</title>
 <style>
-.header{
-display:flex;
-flex-wrap:nowrap;
-color: red;
+		html {
+			font-family: 'DejaVu Sans Mono', 'Lucida Console', 'Menlo', 'Monaco', monospace;
+		}
+				.pyramid-slide {
+			width: 60%;
+			margin: 0 auto;
+			border: 1px solid #F900F4;
+		}
+           header{
+			width: 60%;
+			margin: 0 auto 1rem;
+			text-align: center;
+			background: #FF0081;
+			padding: 2rem 0;
 }
+		.menu {
+			background: grey;
+			padding: 1rem 0;
+			text-align: center;
+		}
+		.screen {
+			background: lightgrey;
+			padding: 2rem;
+			text-align: center;
+			color: red;
+		}
+
+				#high {
+			background: lightblue;
+			width: 100px;
+			height: 6px;
+			margin-right: 0.2rem;
+			display: inline-block;
+			vertical-align: middle;
+			position: relative;
+		}
+				.wrapper {
+			display: inline-block;
+			margin-top: 1rem;
+			margin-right: 2rem;
+			text-align: center;
+		}
 </style>
-<script src="script.js"></script>
+<script language="JavaScript" src="script.js"></script>
 </head>
 <body>
-
+<header>Pyramid-slide</header>
+	<div class="pyramid-slide">
+		<div class="menu">
+			<div class="wrapper">
+				<span>Brick Symbol: </span>
+				<select data-component="select" id="symbols" value="#">
+					<option value="#">#</option>
+					<option value="@">@</option>
+					<option value="$">$</option>
+					<option value="X">X</option>
+				</select>
+			</div>
+			<div class="wrapper">
+				<span>How high? </span>
+				<div>
+  <input type="range" id="high" name="high"
+         min="1" max="20" value="1" step="1">
+  <p id="highValue" style="display: inline-block; width: 15px">1</p>
+                </div>
+			</div>
+		</div>
+		<div class = "screen" id="screen" >#</div>
+	</div>
+	<script>
+		init();
+	</script>
 </body>
 </html>

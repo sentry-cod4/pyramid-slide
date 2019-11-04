@@ -1,0 +1,1 @@
+Solution of task from java-script course on Stepik (https://stepik.org/course/3050/syllabus).
